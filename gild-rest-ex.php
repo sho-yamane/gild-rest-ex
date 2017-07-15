@@ -10,12 +10,20 @@ License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */
 
-//Include
+// Include
 require_once dirname( __FILE__ ) . '/incs/defines.php';
 require_once dirname( __FILE__ ) . '/incs/functions.php';
 require_once dirname( __FILE__ ) . '/incs/class-module-core.php';
 
-//new
+// new
+//  admin
 new gildrest_ex_admin_menu_init();
 new gildrest_ex_admin_notices();
 new gildrest_ex_admin_menu();
+
+//  widget
+new gildrest_ex_widget_new_posts_set();
+
+//  shortcode
+new gildrest_ex_shortcode();
+
