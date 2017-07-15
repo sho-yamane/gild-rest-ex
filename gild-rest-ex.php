@@ -27,3 +27,5 @@ new gildrest_ex_widget_new_posts_set();
 //  shortcode
 new gildrest_ex_shortcode();
 
+//  view
+new gildrest_ex_view();

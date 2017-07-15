@@ -35,7 +35,6 @@ class gildrest_ex_widget_new_posts extends WP_Widget {
         $height     = apply_filters( 'gre_wnp_height', $instance['height'] );
         $number     = apply_filters( 'gre_wnp_number', $instance['number'] );
         $ignore     = apply_filters( 'gre_wnp_ignore', $instance['ignore_check']['active'] );
-        $css        = apply_filters( 'gre_wnp_css', $instance['css'] );
         $cat        = apply_filters( 'gre_wnp_cat', $instance['cat'] );
         if ( ! empty( $instance['post_type'] ) ) {
             $post_type = apply_filters( 'gre_wnp_post_type', $instance['post_type'] );
@@ -131,7 +130,6 @@ class gildrest_ex_widget_new_posts extends WP_Widget {
             'number'        => 5,
             'date'          => array( 'active' => false ),
             'ignore_check'  => array( 'active' => false ),
-            'css'           => array( 'active' => true ),
             'cat'           => null,
             'post_type'     => 'post',
         );
@@ -262,25 +260,6 @@ class gildrest_ex_widget_new_posts extends WP_Widget {
                     <?php _e('Display sticky post', 'gildrest-ex'); ?>
                 </label>
 
-                <br>
-
-                <input
-                    type="checkbox"
-                    class="checkbox"
-                    <?php
-                        if( $instance['css']['active'] ) {
-                            echo 'checked="checked"';
-                        } else {
-                            echo '';
-                        }
-                    ?>
-                    id="<?php echo $this->get_field_id( 'css' ); ?>"
-                    name="<?php echo $this->get_field_name( 'css' ); ?>"
-                />
-                <label for="<?php echo $this->get_field_id( 'css' ); ?>">
-                    <?php _e('Use default css', 'gildrest-ex'); ?>
-                </label>
-
             </p>
 
 
@@ -305,7 +284,6 @@ class gildrest_ex_widget_new_posts extends WP_Widget {
 
         $instance['date']['active']         = $new_instance['date'];
         $instance['ignore_check']['active'] = $new_instance['ignore_check']['active'];
-        $instance['css']['active']          = $new_instance['css'];
         $instance['post_type']              = !empty($new_instance['post_type']) ? $new_instance['post_type'] : 'post';
 
         update_option('gildrest_ex_widget_new_posts', $instance);

@@ -4,6 +4,4 @@ if (! defined('WP_UNINSTALL_PLUGIN')) {
     exit();
 }
 
-function test() {
-    echo 'buybuy';
-}
+delete_option('gildrest_ex_widget_new_posts');
