@@ -1,0 +1,113 @@
+$breakpoints: (
+  'xs': 'screen and (max-width: 321px)',
+  'sm': 'screen and (max-width: 480px)',
+  'column1': 'screen and (max-width: 672px)',
+  'md': 'screen and (max-width: 768px)',
+  'md-article': 'screen and (max-width: 840px)',
+  'lg': 'screen and (max-width: 1100px)',
+) !default;
+
+@mixin mq($breakpoint: lg) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+.gre-share {
+  margin: 0 0 20px;
+  .gre-share-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &.gre-share-num-1 {
+      .share-link-conatiner {
+        width: 100%;
+      }
+    }
+    &.gre-share-num-2 {
+      .share-link-conatiner {
+        width: 50%;
+      }
+    }
+    &.gre-share-num-3 {
+      .share-link-conatiner {
+        width: 33.333333333%;
+      }
+    }
+    .share-link-conatiner {
+      text-align: center;
+      height: 50px;
+      &:first-child {
+        a {
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+      }
+      &:last-child {
+        a {
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }
+      }
+      &.share-fb {
+        a {
+          background: #3b5998;
+          &:before {
+            content: "\f09a";
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin-right: 5px;
+          }
+        }
+      }
+      &.share-tw {
+        a {
+          background: #55acee;
+          &:before {
+            content: "\f099";
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin-right: 5px;
+          }
+        }
+      }
+      &.share-htb {
+        a {
+          background: #008fde;
+          &:before {
+            content: "B!";
+            font-family: Verdana;
+            font-weight: 700;
+            display: inline-block;
+            font-size: 14px;
+            line-height: 1;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin-right: 5px;
+          }
+        }
+      }
+      a {
+        display: block;
+        color: #fff;
+        height: 50px;
+        position: relative;
+        line-height: 50px;
+        span.share-txt {
+          @include mq(sm) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

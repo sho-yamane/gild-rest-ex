@@ -94,7 +94,7 @@ class gildrest_ex_widget_new_posts extends WP_Widget {
                         <li class="gre-wnp-list">
                             <a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php esc_attr( the_title() ); ?>">
                                 <div class="inner">
-                                    <div class="inner-left">
+                                    <div class="inner-left" style="width: <?php echo esc_attr( $width . 'px' ); ?>;">
                                         <div class="thumb" style="background-image: url(<?php echo esc_url( $thumb_url ); ?>); width: <?php echo esc_attr( $width . 'px' ); ?>; height: <?php echo esc_attr( $height . 'px' ); ?>;"></div>
                                     </div>
                                     <div class="inner-right">

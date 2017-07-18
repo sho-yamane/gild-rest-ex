@@ -1,0 +1,80 @@
+aside.widget_gildrest_ex_sns_links {
+  .sns-links-container {
+    .sns-links-top {
+      background: #eaeaea;
+      border-radius: 3px;
+      padding: 15px 0;
+      margin-bottom: 7px;
+      iframe {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .sns-links-bottom {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      &.sns-links-1 {
+        .sns-link {
+          width: 100%;
+        }
+      }
+      &.sns-links-2 {
+        .sns-link {
+          width: 49%;
+        }
+      }
+      &.sns-links-3 {
+        .sns-link {
+          width: 32%;
+        }
+      }
+      .sns-link {
+        text-align: center;
+        height: 50px;
+        a {
+          border-radius: 3px;
+          display: block;
+          color: #fff;
+          height: 50px;
+          position: relative;
+          i {
+            line-height: 1;
+            font-size: 26px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+          }
+          img {
+            height: 20px;
+            width: auto;
+            fill: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+          }
+        }
+        &.sns-link-tw {
+          a {
+            background: #55acee;
+          }
+        }
+        &.sns-link-insta {
+          a {
+            background-image: -webkit-linear-gradient(#400080, transparent), -webkit-linear-gradient(110deg, #d047d1, #ff0000, #ffff00);
+            background-image: -moz-linear-gradient(#400080, transparent), -moz-linear-gradient(110deg, #d047d1, #ff0000, #ffff00);
+            background-image: -o-linear-gradient(#400080, transparent), -o-linear-gradient(110deg, #d047d1, #ff0000, #ffff00);
+            background-image: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+          }
+        }
+        &.sns-link-line {
+          a {
+            background: #00c300;
+          }
+        }
+      }
+    }
+  }
+}

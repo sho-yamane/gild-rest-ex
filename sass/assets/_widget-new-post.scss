@@ -1,0 +1,59 @@
+aside.widget_gildrest_ex_new_posts {
+  ul.gre-wnp-lists {
+    li.gre-wnp-list {
+      padding: 7px 0 7px;
+      border-bottom: 1px solid #eaeaea;
+      position: relative;
+      a {
+        display: block;
+        position: relative;
+        &:after {
+          color: #ccc;
+          content: "\f0da";
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+        .inner {
+          display: table;
+          width: 100%;
+          .inner-left {
+            display: table-cell;
+            vertical-align: top;
+            padding-right: 15px;
+            .thumb {
+              background-size: cover;
+              background-position: center center;
+            }
+          }
+          .inner-right {
+            line-height: 1;
+            padding-right: 14px;
+            time.date {
+              color: #999;
+              font-size: 12px;
+              font-weight: 400;
+              margin-bottom: 3px;
+              margin: 5px 0 3px;
+              display: block;
+            }
+            .title {
+              color: #232323;
+              font-weight: 600;
+              position: relative;
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}

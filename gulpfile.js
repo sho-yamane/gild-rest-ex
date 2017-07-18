@@ -37,11 +37,28 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./assets/js'));
 });
 
+gulp.task('scripts-admin', function() {
+  var scripts = [
+    './js/ex-admin.js'
+  ];
+  gulp.src(scripts)
+    .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
+    .pipe(concat('ex-admin.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./assets/js'));
+
+  gulp.src(scripts)
+    .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
+    .pipe(concat('ex-admin.js'))
+    .pipe(gulp.dest('./assets/js'));
+});
+
 //total
-gulp.task('go', ['sass', 'scripts'], function () { });
+gulp.task('go', ['sass', 'scripts', 'scripts-admin'], function () { });
 
 //watch
 gulp.task('watch', () => {
-  gulp.watch('./sass/*',      ['sass']);
+  gulp.watch('./sass/**/*',      ['sass']);
   gulp.watch('./js/*',        ['scripts']);
+  gulp.watch('./js/*',        ['scripts-admin']);
 });

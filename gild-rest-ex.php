@@ -23,6 +23,10 @@ new gildrest_ex_admin_menu();
 
 //  widget
 new gildrest_ex_widget_new_posts_set();
+new gildrest_ex_widget_sns_links_set();
+
+//  share buttons
+new gildrest_ex_share_buttons();
 
 //  shortcode
 new gildrest_ex_shortcode();
